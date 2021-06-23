@@ -1,38 +1,621 @@
-.App {
-  text-align: center;
+.toolbar {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: grey;
+    position: fixed;
+    z-index: 10;
+}
+.spacer {
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    background-color: #d4d2d2;
+}
+.content {
+
+}
+.logoHolder {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    width: 75px;
+
+}
+.logoHolder img {
+    width: 100%;
+}
+.linkHolder{
+    position: relative;
+}
+.linkHolder a {
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: purple;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+    -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+}
+.linkHolder a:hover {
+    transform: scale(1.05);
+}
+.linkHolder div {
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: purple;
+}
+.footer {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    background-color: grey;
+}
+.mainHolder {
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.error {
+    color: red;
+}
+.galleryHolder {
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+    background-color: #f8e9e9;
+    display: flex;
+    flex-wrap: wrap;
+}
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.entryCardNew {
+    margin: 10px;
+    padding: 10px;
+    background-color: #a97575;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.entryCardOld {
+    margin: 10px;
+    padding: 10px;
+    background-color: #929191;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.must {
+    color: red;
+    position: absolute;
+    z-index: 1;
+    background-color: #813781;
+    opacity: 0.85;
+    width: 85%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+    -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+}
+.must:hover {
+    background-color: #ac70ac;
+    transform: scale(1.05);
+    font-size: 22px;
+}
+.lupaBackground {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: #d4d2d2;
+    min-height: 220vh;
+    width: 100%;
+}
+.linkBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 250px;
+    background-color: #00008b;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+    -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+    margin: 20px
+}
+.linkBoxHolder {
+    display: flex;
+    flex-direction: row;
+}
+.linkBoxBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+}
+.linkBoxBlock a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    margin-top: 50px;
+}
+.linkBox:hover {
+    transform: scale(1.05);
+}
+.cardImgHolder {
+    width: 120px;
+}
+.cardImgHolder img {
+    width: 100%;
+}
+.card {
+    width: 250px;
+    height: 350px;
+    background-color: #ffffff;
+    border: #545454 solid 2px;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+    -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+}
+.card p {
+    font-size: 10px;
+}
+.card button {
+    margin: 10px;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+    -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+}
+.cardHolder {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.statHolder {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.statHolder div {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+.smallCircle {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: #813781 solid 2px;
+    overflow: hidden;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+    -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+    margin: 20px
+}
+.smallCircle img {
+    width: 100%;
+    height: 100%;
+}
+.addGold {
+    margin: 10px;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+    -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+}
+.bold {
+    font-weight: bold;
+}
+.userCard {
+    display: flex;
+    width: 250px;
+    padding: 10px 50px;
+    background-color: #947a94;
+    border: #813781 solid 2px;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+    -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+    margin: 10px;
+}
+.userCard div {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 20px;
+}
+.mt-50 {
+    margin-top: 50px;
+}
+.loginHolder {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.loginHolder a {
+    margin-left: 10%;
+    display: flex;
+    align-self: center;
+    width: 80%;
+    position: absolute;
+}
+.registerHolder {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.imgHolderHolder {
+    width: 200px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    position: relative;
+}
+.enemyImgHolder {
+    width: 200px;
+    border: #813781 solid 2px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+    -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+
+}
+.enemyImgHolder img {
+    width: 110%;
+    height: 110%;
+}
+.heroImgHolder {
+    width: 200px;
+    border: #813781 solid 2px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+    -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+    position: relative;
+}
+.heroImgHolder:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+.heroImgHolder img {
+    width: 110%;
+    height: 110%;
+
+}
+.gameHolder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 600px;
+    border: #813781 solid 2px;
+}
+.attackButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    margin-top: 120px;
+    border: #813781 solid 2px;
+    border-radius: 50%;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+    -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+}
+.attackButton:hover{
+    transform: scale(1.05);
+}
+.attackButton img {
+    width: 120%;
+    border-radius: 50%;
+}
+.heroHealthBarHolder {
+    height: 20px;
+    width: 192px;
+    margin: 10px;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+    -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+}
+.heroHealthBar {
+    height: 20px;
+    background-color: lime;
+}
+.enemyHealthBarHolder {
+    height: 20px;
+    width: 192px;
+    margin: 10px;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+    -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+}
+.enemyHealthBar {
+    height: 20px;
+    background-color: lime;
+}
+.nameModal{
+    position: absolute;
+    height: 100px;
+    width: 190px;
+    background-color: #929191;
+    border: #813781 solid 1px;
+    z-index: 5;
+    left: 25px;
+    top:10px;
+    padding: 10px;
+    overflow: visible;
+}
+.imageModal{
+    position: absolute;
+    height: 50px;
+    width: 190px;
+    background-color: #929191;
+    border: #813781 solid 1px;
+    z-index: 5;
+    left: 250px;
+    padding: 10px;
+    overflow: visible;
+}
+.imageModal button{
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+    -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+    margin: 0 5px;
+}
+.nameModal button{
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+    -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+    margin: 0 5px;
+}
+.imageModal input{
+    width: 170px;
+    margin: 0 5px;
+}
+.nameModal input{
+    width: 170px;
+    margin: 0 5px;
+}
+.modalButtonHolder{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    border: none;
+}
+.weaponBlock{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.weaponHolder{
+    display: flex;
+    height: 65px;
+    flex-direction: row;
+}
+.smallCircle2 {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: #813781 solid 2px;
+    overflow: hidden;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+    -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+    margin: 5px
+}
+.smallCircle2 img {
+    width: 100%;
+    height: 100%;
+}
+.smallCircle2:hover{
+    transform: scale(1.05);
+}
+.selectedWeaponHolder {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 180px;
+    overflow: hidden;
+    border: #813781 solid 2px;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+    -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+}
+.selectedWeaponHolder img {
+    width: 100%;
+}
+.centerHolder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.selectedArmorHolder {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 10px;
+    overflow: hidden;
+    border: #813781 solid 2px;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+    -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+}
+.selectedArmorHolder img {
+    width: 100%;
+}
+.heroHolder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.enemyHolder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.rotate{
+    animation: rotation 1.5s linear infinite;
+}
+@keyframes rotation {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+.lost {
+    color: red;
+    position: absolute;
+    z-index: 1;
+    background-color: #813781;
+    opacity: 0.85;
+    width: 400px;
+    height: 80px;
+    display: flex;
+    top: 150px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+    -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+}
+.lost:hover {
+    background-color: #ac70ac;
+    transform: scale(1.05);
+    font-size: 22px;
+}
+.shopButton a{
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #813781;
+    display: flex;
+    height: 22px;
+    font-weight: bold;
+    color: #351111;
+    border-radius: 10px;
+    margin: 5px 5px 5px 10px;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+    -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+}
+.shopButton a:hover{
+    text-decoration: none;
+    background-color: #a277a2;
+    color: #940505;
+    transform: scale(1.05);
+}
+.transform:hover{
+    transform: scale(1.05);
+}
+@media (max-width: 1000px) {
+    .card {
+        width: 150px;
+        height: 280px;
+        background-color: #ffffff;
+        border: #545454 solid 2px;
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+        -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+    }
+    .cardImgHolder {
+        width: 70px;
+    }
+    .card button {
+        margin: 5px;
+        box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+        -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+    }
+    .toolbar {
+        height: 120px;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: grey;
+        position: fixed;
+        z-index: 10;
+    }
+    .logoHolder {
+         position: absolute;
+         top:10px;
+         left:10px;
+         width: 75px;
+     }
+    .linkHolder a {
+        margin: 5px;
+        padding: 5px;
+
+    }
+
+    .linkHolder div {
+
+        margin: 5px;
+        padding: 5px;
+
+    }
+}
+@media (max-width: 650px) {
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.spacer {
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    background-color: #d4d2d2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
